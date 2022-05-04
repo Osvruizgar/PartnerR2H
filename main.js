@@ -19,10 +19,9 @@ function oddOrEven (numbers) {
     
       return arrayObject;
 }
-
   console.log(oddOrEven([12, 23, 49, 32, 27]));
   console.log(oddOrEven([11,4,2,12,15]));
-  
+ 
   //Easy 2 
   const isPrime = (b) => {
     for(let i = 2; i <= b/2; i++){
@@ -88,7 +87,6 @@ console.log("The two strings are  anagram of each other" )
 
 }else {console.log ("The two strings are not anagram of each other") }
 
-  
   // Medium 4
   const car = {
     make: "toyota",
@@ -118,6 +116,19 @@ console.log("The two strings are  anagram of each other" )
       }
     };
     car.driveAroundWorld();
-
+    car.driveToWork();
+    car.driveAroundWorld();
+    car.runErrands();
     
-
+    //medium 3
+    function postiveInteger(firstNum, secondNum) {
+      firstNum = Math.abs(firstNum);
+      secondNum = Math.abs(secondNum);
+      while(secondNum) {
+      let t = secondNum;
+      secondNum = firstNum % secondNum;
+      firstNum = t;
+      }
+      return firstNum;
+    }
+    console.log(postiveInteger(78,126))
