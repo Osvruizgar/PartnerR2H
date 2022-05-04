@@ -1,4 +1,4 @@
-//Easy 1
+//Easy 1 AB/OR
 function oddOrEven (numbers) {
     let even = [];
     let odd = [];
@@ -22,7 +22,7 @@ function oddOrEven (numbers) {
   console.log(oddOrEven([12, 23, 49, 32, 27]));
   console.log(oddOrEven([11,4,2,12,15]));
  
-  //Easy 2 
+  //Easy 2 AB
   const isPrime = (b) => {
     for(let i = 2; i <= b/2; i++){
        if(b % i === 0){
@@ -35,7 +35,7 @@ function oddOrEven (numbers) {
     const arr = [];
     let i = 2;
     while(arr.length < num){
-       if(isPrime(i)){
+       if(isPrime(i)){ 
           arr.push(i);
        };
        i = i === 2 ? i+1 : i+2;
@@ -43,7 +43,6 @@ function oddOrEven (numbers) {
     return arr;
  };
  console.log(generatePrime(10));
-
 
   //Medium1
 let vowelChecker = function(x) {
@@ -55,7 +54,7 @@ let vowelChecker = function(x) {
 }
 vowelChecker("e");
 
-//Medium 2
+//Medium 2 AB
 
 function areAnagram(str1,str2){
   // Get lengths of both strings
@@ -87,7 +86,7 @@ console.log("The two strings are  anagram of each other" )
 
 }else {console.log ("The two strings are not anagram of each other") }
 
-  // Medium 4
+  // Medium 4 OR
   const car = {
     make: "toyota",
     model: "GR86",
@@ -120,7 +119,7 @@ console.log("The two strings are  anagram of each other" )
     car.driveAroundWorld();
     car.runErrands();
     
-    //medium 3
+    //medium 3 OR
     function postiveInteger(firstNum, secondNum) {
       firstNum = Math.abs(firstNum);
       secondNum = Math.abs(secondNum);
@@ -132,3 +131,16 @@ console.log("The two strings are  anagram of each other" )
       return firstNum;
     }
     console.log(postiveInteger(78,126))
+
+    //hard AB
+    function matchBrackets(word) {
+      if (word.includes('{') && word.includes ('}') ||
+      word.includes('[') && word.includes(']') || 
+      word.includes('(') && word.includes(')')){
+        console.log(`${word} is`, true);
+      }else{
+        console.log(`${word} is`, false);
+      };
+    }
+    matchBrackets('[curls]');
+    matchBrackets('{curl]');
