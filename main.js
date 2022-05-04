@@ -19,11 +19,10 @@ function oddOrEven (numbers) {
     
       return arrayObject;
 }
-
   console.log(oddOrEven([12, 23, 49, 32, 27]));
   console.log(oddOrEven([11,4,2,12,15]));
   
-  // Medium
+  // Medium 4
   const car = {
     make: "toyota",
     model: "GR86",
@@ -51,4 +50,19 @@ function oddOrEven (numbers) {
           console.log("New Mileage: " + this.mileage)
       }
     };
+    car.driveToWork();
     car.driveAroundWorld();
+    car.runErrands();
+    
+    //medium 3
+    function postiveInteger(firstNum, secondNum) {
+      firstNum = Math.abs(firstNum);
+      secondNum = Math.abs(secondNum);
+      while(secondNum) {
+      let t = secondNum;
+      secondNum = firstNum % secondNum;
+      firstNum = t;
+      }
+      return firstNum;
+    }
+    console.log(postiveInteger(78,126))
